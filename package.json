@@ -1,0 +1,39 @@
+{
+  "name": "solr-client-cache",
+  "version": "1.0.0",
+  "description": "Caching for Solr Client",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "author": "Victor Kohl Tavares",
+  "license": "MIT",
+  "dependencies": {
+    "cacheman": "~2.2.1",
+    "cacheman-redis": "~1.1.2",
+    "jsosort": "0.0.0",
+    "sha1": "~1.1.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/victorkohl/solr-client-cache.git"
+  },
+  "keywords": [
+    "cache",
+    "solr",
+    "redis"
+  ],
+  "bugs": {
+    "url": "https://github.com/victorkohl/solr-client-cache/issues"
+  },
+  "homepage": "https://github.com/victorkohl/solr-client-cache",
+  "devDependencies": {
+    "mocha": "~3.1.2",
+    "should": "~11.1.1",
+    "sinon": "^1.17.6",
+    "solr-client": "^0.6.0"
+  }
+}
