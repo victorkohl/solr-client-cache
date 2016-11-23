@@ -151,6 +151,19 @@ describe('SolrClientCache', () => {
       });
     });
 
+    it('should flag the results as "from cache"', (done) => {
+      solrClient.cache().search({}, (err) => {
+        should.not.exist(err);
+
+        solrClient.cache().search({}, (err, results) => {
+          should.not.exist(err);
+          results.should.have.property('__fromCache');
+          results.__fromCache.should.be.true();
+          done();
+        });
+      });
+    });
+
   });
 
   describe('querying without cache', () => {
