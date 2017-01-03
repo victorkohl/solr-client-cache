@@ -176,6 +176,14 @@ describe('SolrClientCache', () => {
       });
     });
 
+    it('should NOT cache a query when the config is overriden', (done) => {
+      solrClient.cache().search({}, true, (err, results) => {
+        should.not.exist(err);
+        results.should.not.have.property('__fromCache');
+        done();
+      });
+    });
+
     it('should NOT save the results to cache', (done) => {
       solrClient.search({}, (err, results) => {
         should.not.exist(err);
